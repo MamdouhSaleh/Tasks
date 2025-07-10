@@ -5,10 +5,7 @@ import mongoose from 'mongoose';
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/shop', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect('mongodb://localhost:27017/shop');
 
 const Product = mongoose.model('Product', new mongoose.Schema({
   name: String,
